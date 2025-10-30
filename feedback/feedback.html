@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Feedback | Design Global Technology.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./feedback.css" />
+  </head>
+  <body>
+    <div class="feedback-container">
+      <h2>Customer Feedback</h2>
+      <div class="company-name">Design Global Technology.</div>
+      <form id="feedbackForm">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label for="name" class="required">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label for="company" class="required">Company Name</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                required
+                placeholder="Enter your company name"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label for="email" class="required">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email address"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label for="contact">Contact Number</label>
+              <input
+                type="tel"
+                id="contact"
+                name="contact"
+                placeholder="Enter your contact number"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="message" class="required">Your Comments</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Please share your feedback, suggestions, or concerns..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <p id="responseMessage"></p>
+    </div>
+
+    <section class="flooting-whatsapp-btn flooting-ai-btn">
+      <a
+        href="https://wa.me/918420600137"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+        />
+      </a>
+      <br />
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+          Tawk_LoadStart = new Date();
+        (function () {
+          var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/680b8cf929a5a6191417a3dc/1ipmhtbsd";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./feedback.js"></script>
+  </body>
+</html>

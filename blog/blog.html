@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Global Technology | Innovative Digital Solutions</title>
+    <!-- Bootstrap CSS -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Email.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="mt-2">
+      <nav class="navbar navbar-expand-lg position-relative">
+        <div class="container">
+          <div class="row w-100 align-items-center">
+            <div class="col-3">
+              <a href="../index.html">
+                <img
+                  src="../Assets/img/DG-LOGO-THREE.png"
+                  alt="Logo"
+                  style="max-width: 150px; width: 150px"
+                />
+              </a>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav text-center py-3 py-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active header_btn_opt"
+                      href="../about/about.html"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown material-dropdown">
+                    <a
+                      class="nav-link dropdown-toggle header_btn_opt"
+                      href=""
+                      tabindex="0"
+                    >
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!-- Web Development with nested submenu -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Web Services
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/webdev/webdev.html"
+                              >Web Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/web-design/web-design.html"
+                              >Web Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/cms-development/cms-development.html"
+                              >CMS Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/app-development/app-development.html"
+                              >APP Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/security-maintenance/security-maintenance.html"
+                              >Security & Maintenance</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Other menu items -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Digital Marketing
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/seo/seo.html"
+                              >SEO Optimization</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/graphic-design/graphic-design.html"
+                              >Graphic Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/social-market/social-market.html"
+                              >Social Media Marketing</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Branding
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/ecommerce-solution/ecommerce-solution.html"
+                              >Ecommerce Solution</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/photography/photography.html"
+                              >Photography</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/performance-optimization/performance-optimization.html"
+                              >Performance Optimization</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../clients/clients.html"
+                      >Our Clientele</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../portfolio/portfolio.html"
+                      >Portfolio</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../contact/contact.html"
+                      >Contact Us</a
+                    >
+                  </li>
+
+                  <li class="nav-item d-lg-none m-0">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdWgKu-Q9xJS_hanYGfQMfHJzPQlcLseWFE85VbBUnkbRg-yQ/viewform?usp=header"
+                      class="consultant-btn w-75 p-2"
+                      style="font-weight: 500; text-decoration: none"
+                    >
+                      FREE CONSULTATION
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end align-items-center">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdWgKu-Q9xJS_hanYGfQMfHJzPQlcLseWFE85VbBUnkbRg-yQ/viewform?usp=header"
+                class="consultant-btn d-none d-lg-inline-block p-2"
+                style="font-weight: 500; text-decoration: none"
+              >
+                FREE CONSULTATION
+              </a>
+
+              <button
+                class="navbar-toggler ms-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon">
+                  <div></div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">
+              Innovative Digital Solutions for Your Business
+            </h1>
+            <p class="lead mb-4">
+              We create cutting-edge digital experiences that drive growth and
+              transform businesses in the modern digital landscape.
+            </p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <!-- 3D Image Ring Slider -->
+            <div class="slider-container">
+              <div class="ring">
+                <!-- Images will be positioned here with JavaScript -->
+              </div>
+            </div>
+
+            <div class="controls">
+              <div class="control-btn" id="pauseBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-pause"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-4" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="mb-5">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                About Our Company
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+
+            <p class="mb-4" style="text-align: justify">
+              Design Global Technology is a leading provider of innovative
+              digital solutions, helping businesses transform and thrive in the
+              digital age.
+            </p>
+            <p class="mb-4" style="text-align: justify">
+              With over a decade of experience, our team of experts delivers
+              cutting-edge web development, mobile applications, and digital
+              marketing solutions tailored to your unique business needs.
+            </p>
+            <div class="row mt-4">
+              <div class="col-md-6 mb-3">
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-check2"
+                    viewBox="0 0 16 16"
+                    style="color: #3a8fd4"
+                  >
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                  <div class="ms-3">
+                    <h5>Expert Team</h5>
+                    <p class="mb-0">Certified Experts</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-check2"
+                    viewBox="0 0 16 16"
+                    style="color: #3a8fd4"
+                  >
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                  <div class="ms-3">
+                    <h5>Quality Assurance</h5>
+                    <p class="mb-0">Verified Reliability</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-check2"
+                    viewBox="0 0 16 16"
+                    style="color: #3a8fd4"
+                  >
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                  <div class="ms-3">
+                    <h5>24/7 Support</h5>
+                    <p class="mb-0">Always Available</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-check2"
+                    viewBox="0 0 16 16"
+                    style="color: #3a8fd4"
+                  >
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                  <div class="ms-3">
+                    <h5>Modern Solutions</h5>
+                    <p class="mb-0">Advanced Technology</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 ps-4">
+            <img
+              src="../Assets/img/blog-about.jpeg"
+              alt="Our Team"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <!-- Blog Section -->
+    <section class="py-4 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span
+            style="
+              font-size: 30px;
+              font-weight: 600;
+              display: inline-block;
+              position: relative;
+              color: #031246;
+            "
+          >
+            Latest Blogs
+            <span
+              style="
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 4px;
+                width: 50%;
+                background-color: #031246;
+                border-radius: 5px;
+              "
+            ></span>
+          </span>
+        </div>
+
+        <div class="row g-4">
+          <!-- Blog Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  The Biggest Technology Trends of 2025 You Shouldn’t Ignore
+                </h5>
+                <p class="card-text">
+                  <small class="text-muted">September 11, 2025</small>
+                </p>
+                <p class="card-text">
+                  If we take a moment and look around, it’s clear — technology
+                  is shaping almost every part of our lives. […]
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a
+                  href="../blog-page/blog-page-one/blog-page-one.html"
+                  class="btn btn-primary"
+                  >Read Post »</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 (example placeholder for more blogs) -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Another Blog Title</h5>
+                <p class="card-text">
+                  <small class="text-muted">October 1, 2025</small>
+                </p>
+                <p class="card-text">
+                  Short description of the blog content goes here. […]
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-primary">Read Post »</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 (example placeholder) -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Third Blog Title</h5>
+                <p class="card-text">
+                  <small class="text-muted">September 25, 2025</small>
+                </p>
+                <p class="card-text">
+                  Another short description of the blog content. […]
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="btn btn-primary">Read Post »</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-light pb-4" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-3">
+            <div class="text-center mb-5">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Our Services
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+
+            <!-- <p class="lead">
+              We offer a comprehensive range of digital services to help your
+              business succeed
+            </p> -->
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/webdev/webdev.html"
+              style="text-decoration: none; color: #000"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-laptop"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
+                    />
+                  </svg>
+                </div>
+
+                <div class="card-body text-center">
+                  <h4 class="card-title">Web Development</h4>
+                  <p class="card-text">
+                    Custom websites and web applications built with the latest
+                    technologies to deliver exceptional user experiences.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/app-development/app-development.html"
+              style="text-decoration: none"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-phone"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                    />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                  </svg>
+                </div>
+
+                <div class="card-body text-center">
+                  <h4 class="card-title">Mobile Apps</h4>
+                  <p class="card-text">
+                    Native and cross-platform mobile applications designed to
+                    engage users and drive business growth.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/digital-marketing/digital-marketing.html"
+              style="color: #000; text-decoration: none"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-graph-up"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"
+                    />
+                  </svg>
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title">Digital Marketing</h4>
+                  <p class="card-text">
+                    Comprehensive digital marketing strategies to increase your
+                    online visibility and drive qualified traffic.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/graphic-design/graphic-design.html"
+              style="text-decoration: none; color: #000"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-palette"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
+                    />
+                    <path
+                      d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7"
+                    />
+                  </svg>
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title">UI/UX Design</h4>
+                  <p class="card-text">
+                    User-centered design solutions that create intuitive,
+                    engaging, and visually appealing digital experiences.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/seo/seo.html"
+              style="color: #000; text-decoration: none"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title">SEO Optimization</h4>
+                  <p class="card-text">
+                    Scalable cloud infrastructure and services to optimize
+                    performance, security, and business continuity.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="../service/social-market/social-market.html"
+              style="color: #000; text-decoration: none"
+            >
+              <div class="card service-card p-4">
+                <div class="service-icon mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-megaphone"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"
+                    />
+                  </svg>
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title">Social Media Promotion</h4>
+                  <p class="card-text">
+                    Comprehensive security solutions to protect your digital
+                    assets and ensure regulatory compliance.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-4 stats-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-number">574+</div>
+            <p class="fw-semibold">Projects Completed</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-number">98%</div>
+            <p class="fw-semibold">Happy Clients</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-number">7+</div>
+            <p class="fw-semibold">Years Experience</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-number">24/7</div>
+            <p class="fw-semibold">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-4" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-3">
+            <!-- <h2 class="section-title d-inline-block">Client Testimonials</h2> -->
+            <div class="text-center mb-5">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Client Testimonials
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+
+            <!-- <p class="lead">
+              See what our clients have to say about working with us
+            </p> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <!-- <img
+                    src="https://randomuser.me/api/portraits/women/45.jpg"
+                    alt="Client"
+                    class="rounded-circle"
+                    width="60"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-person-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-0">Rajib Basak</h5>
+                  <p class="text-muted mb-0">Riddhima Fashion</p>
+                </div>
+              </div>
+              <p class="mb-0">
+                "Design Global Technology transformed our digital presence with
+                their innovative solutions. Their team's expertise and
+                dedication exceeded our expectations."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <!-- <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Client"
+                    class="rounded-circle"
+                    width="60"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-person-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-0">Minal Paul</h5>
+                  <p class="text-muted mb-0">Lakmé Academy</p>
+                </div>
+              </div>
+              <p class="mb-0">
+                "Working with Design Global Technology has been a game-changer
+                for our business. Their strategic approach and excellence
+                delivered outstanding results."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <!-- <img
+                    src="https://randomuser.me/api/portraits/women/68.jpg"
+                    alt="Client"
+                    class="rounded-circle"
+                    width="60"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-person-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-0">Vikram Kanjee</h5>
+                  <p class="text-muted mb-0">Dragons' Den</p>
+                </div>
+              </div>
+              <p class="mb-0">
+                "Working with Design Global Technology was a game changer for
+                our business. Their cloud solutions have improved our
+                operational efficiency and reduced costs by 25%."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flooting-whatsapp-btn flooting-ai-btn">
+      <a
+        href="https://wa.me/918420600137"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+        />
+      </a>
+      <br />
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+          Tawk_LoadStart = new Date();
+        (function () {
+          var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/680b8cf929a5a6191417a3dc/1ipmhtbsd";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
+    </section>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Logo and About Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">About</h3>
+          <p class="about-text">
+            Design Global Technology is a premier digital solutions provider
+            offering web development, digital marketing, and corporate branding
+            services.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/dsignglobal/" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/designglobal_/" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://in.linkedin.com/company/design-global-technology"
+              class="me-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+
+            <a href="https://wa.me/918420600137" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-whatsapp"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Useful Links Section - Part 1 -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Useful Links</h3>
+          <ul class="footer-links">
+            <!-- <li><a href="#">Careers</a></li> -->
+            <li><a href="../faq/faq.html">FAQ</a></li>
+            <li><a href="../policy/policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="../terms-condition/terms-condition.html"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li><a href="../event/event.html">Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"
+                />
+                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg>
+              <span>+91 84206 00137</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                />
+              </svg>
+              <span>info@designglobal.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hiring Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">We're Hiring</h3>
+          <p class="hiring-text">Join our talented team</p>
+          <div class="hiring-roles">
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="web-dev"
+              >Web Developer</a
+            >
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="graphic-designer"
+            >
+              Graphic Designer
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sales-executive"
+            >
+              Sales Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="social-media-executive"
+            >
+              Social Media Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sr-sales-executive"
+            >
+              Sr. Sales Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sr-web-developer"
+            >
+              Sr. Web Developer
+            </a>
+          </div>
+          <a
+            href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+            style="text-decoration: none"
+            class="apply-all-btn"
+            >Apply for Any Position</a
+          >
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Design Global Technology</p>
+
+        <div
+          class="address-section ps-2"
+          style="font-size: 11px; text-align: center"
+        >
+          <div>
+            Corporate Address: 8, Jodhpur Gardens, Lake Gardens, Kolkata, 700045
+            (in) || Registered Address: 15, BBT Rd, Budge Budge, Kolkata 700137
+            (in)
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="./blog.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ring = document.querySelector(".ring");
+        const prevBtn = document.getElementById("prevBtn");
+        const pauseBtn = document.getElementById("pauseBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const pauseIcon = pauseBtn.querySelector("i");
+
+        const images = [
+          "../Assets/img/slider-1.jpeg",
+          "../Assets/img/slider-2.jpeg",
+          "../Assets/img/slider-4.jpeg",
+          "../Assets/img/slider-5.jpeg",
+          "../Assets/img/slider-6.jpeg",
+          "../Assets/img/slider-7.jpeg",
+          "../Assets/img/slider-8.jpeg",
+          "../Assets/img/slider-9.jpeg",
+        ];
+
+        const imageDistance = 500; // z-distance for 3D effect
+        const angle = 360 / images.length;
+        let isPaused = false;
+        let currentRotation = 0;
+
+        // Create and position images in 3D space
+        images.forEach((imageUrl, index) => {
+          const imageElement = document.createElement("div");
+          imageElement.className = "image";
+          imageElement.style.backgroundImage = `url(${imageUrl})`;
+          imageElement.style.transform = `rotateY(${
+            index * angle
+          }deg) translateZ(${imageDistance}px)`;
+
+          // Add staggered animation delay for entrance effect
+          imageElement.style.animation = `fadeIn 0.8s ease-out ${
+            index * 0.1
+          }s both`;
+
+          ring.appendChild(imageElement);
+        });
+
+        // Pause/Play functionality
+        pauseBtn.addEventListener("click", function () {
+          isPaused = !isPaused;
+
+          const pauseSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+      class="bi bi-pause" viewBox="0 0 16 16">
+      <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4
+        0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1
+        0V4a.5.5 0 0 1 .5-.5"/>
+    </svg>`;
+
+          const playSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+      class="bi bi-play" viewBox="0 0 16 16">
+      <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1
+        0 1.392l-6.363 3.692C4.713 12.69 4 12.345
+        4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg>`;
+
+          if (isPaused) {
+            ring.classList.add("paused");
+            pauseBtn.innerHTML = playSVG; // Show play icon
+          } else {
+            ring.classList.remove("paused");
+            pauseBtn.innerHTML = pauseSVG; // Show pause icon
+          }
+        });
+
+        // Next button - rotate ring forward
+        nextBtn.addEventListener("click", function () {
+          currentRotation -= angle;
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        });
+
+        // Previous button - rotate ring backward
+        prevBtn.addEventListener("click", function () {
+          currentRotation += angle;
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        });
+
+        // Handle mobile touch events for basic interaction
+        let touchStartX = 0;
+        let isDragging = false;
+
+        ring.addEventListener("touchstart", function (e) {
+          touchStartX = e.touches[0].clientX;
+          isDragging = true;
+          ring.style.animationPlayState = "paused";
+        });
+
+        ring.addEventListener("touchmove", function (e) {
+          if (!isDragging) return;
+
+          const touchX = e.touches[0].clientX;
+          const deltaX = touchX - touchStartX;
+
+          // Calculate rotation based on drag distance
+          const rotation = deltaX * 0.5;
+
+          // Apply rotation directly
+          ring.style.transform = `rotateY(${rotation}deg)`;
+        });
+
+        ring.addEventListener("touchend", function () {
+          isDragging = false;
+          if (!isPaused) {
+            ring.style.animationPlayState = "running";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

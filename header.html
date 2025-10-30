@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <style>
+      /* =========================
+   HEADER & NAVBAR STYLES START
+========================= */
+      :root {
+        --border-radius: 30px;
+        --border-width: 3px;
+        --bg-color: #05314f;
+        --text-color: #fff;
+      }
+
+      /* Poppins font for all navbar elements */
+      .navbar-nav,
+      .navbar-nav .nav-link,
+      .navbar-nav .dropdown-toggle,
+      .navbar-nav .dropdown-item,
+      .header_btn_opt,
+      .consultant-btn {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500 !important;
+      }
+
+      /* Navbar collapse */
+      .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+      }
+      @media (min-width: 992px) {
+        .navbar-collapse {
+          position: static;
+          background: none;
+        }
+      }
+
+      /* Navbar toggler */
+      .navbar-toggler {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        background-image: none;
+        position: relative;
+        width: 1em;
+        height: 1em;
+      }
+      .navbar-toggler-icon::before,
+      .navbar-toggler-icon::after,
+      .navbar-toggler-icon div {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        transition: transform 0.3s, top 0.3s, opacity 0.3s;
+      }
+      .navbar-toggler-icon::before {
+        top: 0;
+      }
+      .navbar-toggler-icon div {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .navbar-toggler-icon::after {
+        bottom: 0;
+      }
+
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+        transform: rotate(45deg);
+        top: 8px;
+      }
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+      }
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon div {
+        opacity: 0;
+      }
+
+      /* Consultant button */
+      .consultant-btn {
+        position: relative;
+        padding: 12px 30px;
+        font-weight: 900 !important;
+        color: var(--text-color);
+        background: var(--bg-color);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .consultant-btn::before {
+        content: "";
+        position: absolute;
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        right: calc(-1 * var(--border-width));
+        bottom: calc(-1 * var(--border-width));
+        background: linear-gradient(
+          270deg,
+          #ff0055,
+          #ff9900,
+          #ffee00,
+          #33ff00,
+          #00ffee,
+          #3300ff,
+          #ff00ff,
+          #ff0055
+        );
+        background-size: 800% 800%;
+        border-radius: calc(var(--border-radius) + var(--border-width));
+        z-index: -1;
+        animation: rainbowBorder 5s linear infinite;
+      }
+      @keyframes rainbowBorder {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Navbar items spacing */
+      @media (min-width: 992px) and (max-width: 1200px) {
+        ul > li > a {
+          padding: 5px !important;
+        }
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 992px) {
+        .navbar-nav li > a {
+          padding: 10px;
+        }
+        .nav-item.d-lg-none .consultant-btn {
+          padding: 8px 20px;
+          font-size: 13px;
+          width: 50% !important;
+          margin: 10px auto;
+        }
+      }
+
+      /* =========================
+   MATERIAL DROPDOWN STYLES
+========================= */
+      .material-dropdown {
+        position: relative;
+      }
+
+      /* Main dropdown menu */
+      .material-dropdown .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        display: none;
+        padding: 5px 0;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
+          0 1.5px 6px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+        list-style: none;
+      }
+
+      /* Show dropdown on hover/focus (desktop) */
+      .material-dropdown:hover > .dropdown-menu,
+      .material-dropdown:focus-within > .dropdown-menu {
+        display: block;
+      }
+
+      /* Dropdown items */
+      .material-dropdown .dropdown-item {
+        position: relative;
+        padding: 10px 22px;
+        color: #333;
+        white-space: nowrap;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+      }
+      .material-dropdown .dropdown-item:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Nested submenu */
+      .material-dropdown .dropdown-submenu {
+        position: relative;
+      }
+      .material-dropdown .dropdown-submenu > a .arrow {
+        float: right;
+        transition: transform 0.3s ease;
+      }
+
+      /* Submenu for desktop (right side) */
+      .material-dropdown .dropdown-submenu .dropdown {
+        top: 0;
+        left: 100%;
+        position: absolute;
+        display: none;
+        min-width: 180px;
+        padding: 5px 0;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
+          0 1.5px 6px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        list-style: none;
+      }
+      .material-dropdown .dropdown-submenu:hover > .dropdown {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      .material-dropdown .dropdown-submenu:hover > a .arrow {
+        transform: rotate(90deg);
+      }
+
+      /* Mobile view: dropdown toggle */
+      @media (max-width: 992px) {
+        .material-dropdown .dropdown-menu {
+          position: relative;
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+        .material-dropdown.active > .dropdown-menu {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          max-height: 500px;
+        }
+
+        .material-dropdown .dropdown-submenu .dropdown {
+          position: relative;
+          top: 0;
+          left: 0;
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+        .material-dropdown .dropdown-submenu.active > .dropdown {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          max-height: 500px;
+          padding-left: 1rem;
+        }
+        .material-dropdown .dropdown-submenu.active > a .arrow {
+          transform: rotate(90deg);
+        }
+      }
+
+      /* =========================
+   HEADER & NAVBAR STYLES END
+========================= */
+    </style>
+  </head>
+  <body>
+    <header class="mt-2">
+      <nav class="navbar navbar-expand-lg position-relative">
+        <div class="container">
+          <div class="row w-100 align-items-center">
+            <div class="col-3">
+              <a href="./index.html">
+                <img
+                  src="../Assets/img/DG-LOGO-THREE.png"
+                  alt="Logo"
+                  style="max-width: 150px; width: 150px"
+                />
+              </a>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav text-center py-3 py-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active header_btn_opt"
+                      href="#"
+                      onclick="goToHome()"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown material-dropdown">
+                    <a
+                      class="nav-link dropdown-toggle header_btn_opt"
+                      href="#"
+                      tabindex="0"
+                    >
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!-- Web Development with nested submenu -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                          onclick="goToWebDes()"
+                        >
+                          Web Services
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToWebDev()"
+                              >Web Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToWebDes()"
+                              >Web Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToCmsDev()"
+                              >CMS Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToAppDev()"
+                              >APP Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToSecurityMaintenance()"
+                              >Security & Maintenance</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Other menu items -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Digital Marketing
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToSeo()"
+                              >SEO Optimization</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToGraphicDesign()"
+                              >Graphic Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToSocialMediaMaketing()"
+                              >Social Media Marketing</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Branding
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToEcommerce()"
+                              >Ecommerce Solution</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToPhotography()"
+                              >Photography</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="#"
+                              onclick="goToPerformance()"
+                              >Performance Optimization</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="#"
+                      onclick="goToAbout()"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="#"
+                      onclick="goToPortfolio()"
+                      >Portfolio</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="#"
+                      onclick="goToContact()"
+                      >Contact Us</a
+                    >
+                  </li>
+
+                  <li class="nav-item d-lg-none m-0">
+                    <!-- <button
+                      href="#"
+                      class="consultant-btn w-75 p-2"
+                      style="font-weight: 500"
+                    >
+                      FREE CONSULTATION
+                    </button> -->
+                    <a
+                      href=""
+                      target="_blank"
+                      class="consultant-btn w-75 p-2"
+                      style="
+                        font-weight: 500;
+                        display: inline-block;
+                        text-align: center;
+                        text-decoration: none;
+                      "
+                      onclick="goFreeConsultation()"
+                    >
+                      FREE CONSULTATION
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end align-items-center">
+              <button
+                href=""
+                class="consultant-btn d-none d-lg-inline-block p-2"
+                style="font-weight: 500"
+                onclick="goFreeConsultation()"
+              >
+                FREE CONSULTATION
+              </button>
+
+              <button
+                class="navbar-toggler ms-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon">
+                  <div></div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- toggel-btn-openandclose-script -->
+    <script>
+      // Top-level dropdown toggle (Services)
+      document
+        .querySelectorAll(".material-dropdown > a")
+        .forEach((dropdownToggle) => {
+          dropdownToggle.addEventListener("click", function (e) {
+            if (window.innerWidth <= 992) {
+              e.preventDefault();
+
+              const parent = this.parentElement;
+
+              // Toggle this dropdown
+              if (parent.classList.contains("active")) {
+                parent.classList.remove("active"); // close if open
+              } else {
+                // Close all other top-level dropdowns first
+                document
+                  .querySelectorAll(".material-dropdown")
+                  .forEach((el) => {
+                    el.classList.remove("active");
+                  });
+
+                parent.classList.add("active"); // open this one
+              }
+            }
+          });
+        });
+
+      // Nested submenu toggle
+      document
+        .querySelectorAll(".dropdown-submenu > a")
+        .forEach((submenuToggle) => {
+          submenuToggle.addEventListener("click", function (e) {
+            if (window.innerWidth <= 992) {
+              e.preventDefault();
+
+              const parent = this.parentElement;
+
+              // Toggle this submenu
+              if (parent.classList.contains("active")) {
+                parent.classList.remove("active"); // close if open
+              } else {
+                // Close sibling submenus
+                parent.parentElement
+                  .querySelectorAll(".dropdown-submenu")
+                  .forEach((el) => {
+                    el.classList.remove("active");
+                  });
+
+                parent.classList.add("active"); // open this one
+              }
+            }
+          });
+        });
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

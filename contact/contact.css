@@ -1,0 +1,548 @@
+:root {
+  --primary-dark: #031246;
+  --primary-medium: #05314f;
+  --primary-light: #3a8fd4;
+  --white: #fff;
+  /* header-section */
+  --border-radius: 30px;
+  --border-width: 3px;
+  --bg-color: #05314f;
+  --text-color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-dark);
+  /* background-color: #f8f9fa; */
+}
+
+/* =========================
+   HEADER & NAVBAR STYLES START
+========================= */
+:root {
+  --border-radius: 30px;
+  --border-width: 3px;
+  --bg-color: #05314f;
+  --text-color: #fff;
+}
+
+/* Poppins font for all navbar elements */
+.navbar-nav,
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle,
+.navbar-nav .dropdown-item,
+.header_btn_opt,
+.consultant-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500 !important;
+}
+
+/* Navbar collapse */
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: static;
+    background: none;
+  }
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: transform 0.3s, top 0.3s, opacity 0.3s;
+}
+.navbar-toggler-icon::before {
+  top: 0;
+}
+.navbar-toggler-icon div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar-toggler-icon::after {
+  bottom: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon div {
+  opacity: 0;
+}
+
+/* Consultant button */
+.consultant-btn {
+  position: relative;
+  padding: 12px 30px;
+  font-weight: 900 !important;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.consultant-btn::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  right: calc(-1 * var(--border-width));
+  bottom: calc(-1 * var(--border-width));
+  background: linear-gradient(
+    270deg,
+    #ff0055,
+    #ff9900,
+    #ffee00,
+    #33ff00,
+    #00ffee,
+    #3300ff,
+    #ff00ff,
+    #ff0055
+  );
+  background-size: 800% 800%;
+  border-radius: calc(var(--border-radius) + var(--border-width));
+  z-index: -1;
+  animation: rainbowBorder 5s linear infinite;
+}
+@keyframes rainbowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar items spacing */
+@media (min-width: 992px) and (max-width: 1200px) {
+  ul > li > a {
+    padding: 5px !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 992px) {
+  .navbar-nav li > a {
+    padding: 10px;
+  }
+  .nav-item.d-lg-none .consultant-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+    width: 50% !important;
+    margin: 10px auto;
+  }
+}
+
+/* =========================
+   MATERIAL DROPDOWN STYLES
+========================= */
+.material-dropdown {
+  position: relative;
+}
+
+/* Main dropdown menu */
+.material-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  display: none;
+  padding: 5px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  list-style: none;
+}
+
+/* Show dropdown on hover/focus (desktop) */
+.material-dropdown:hover > .dropdown-menu,
+.material-dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown items */
+.material-dropdown .dropdown-item {
+  position: relative;
+  padding: 10px 22px;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+.material-dropdown .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Nested submenu */
+.material-dropdown .dropdown-submenu {
+  position: relative;
+}
+.material-dropdown .dropdown-submenu > a .arrow {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+/* Submenu for desktop (right side) */
+.material-dropdown .dropdown-submenu .dropdown {
+  top: 0;
+  left: 100%;
+  position: absolute;
+  display: none;
+  min-width: 180px;
+  padding: 5px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  list-style: none;
+}
+.material-dropdown .dropdown-submenu:hover > .dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.material-dropdown .dropdown-submenu:hover > a .arrow {
+  transform: rotate(90deg);
+}
+
+/* Mobile view: dropdown toggle */
+@media (max-width: 992px) {
+  .material-dropdown .dropdown-menu {
+    position: relative;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .material-dropdown.active > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+  }
+
+  .material-dropdown .dropdown-submenu .dropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .material-dropdown .dropdown-submenu.active > .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    padding-left: 1rem;
+  }
+  .material-dropdown .dropdown-submenu.active > a .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* =========================
+   HEADER & NAVBAR STYLES END
+========================= */
+
+/* contact-form & Google map */
+
+.contact-section {
+  padding: 30px 0;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-light);
+}
+
+.contact-form-container {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.25rem rgba(58, 143, 212, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  padding: 12px 30px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-medium);
+  border-color: var(--primary-medium);
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+/* .map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+} */
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--primary-medium);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* ================= */
+
+/* footer */
+
+/* Footer-section */
+
+.site-footer {
+  background-color: #031246;
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #4dabf7;
+}
+
+.social-links > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 0;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.footer-links a:hover {
+  color: #4dabf7;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item svg {
+  color: #4dabf7;
+  width: 16px;
+  height: 16px;
+}
+
+.hiring-text {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.hiring-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.role-btn,
+.apply-all-btn {
+  background-color: transparent;
+  border: 1px solid #4dabf7;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 12px;
+}
+
+.role-btn:hover,
+.apply-all-btn:hover {
+  background-color: #4dabf7;
+}
+
+.apply-all-btn {
+  background-color: #4dabf7;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.apply-all-btn:hover {
+  background-color: #3a8fd4;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+.whatsapp_float {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  bottom: 50px;
+  left: 50px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.whatsapp_float:hover {
+  transform: scale(1.3);
+}
+
+.whatsapp_float img {
+  width: 35px;
+  height: 35px;
+}

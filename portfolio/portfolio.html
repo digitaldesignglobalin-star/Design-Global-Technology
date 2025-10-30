@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Technology - Digital Growth Solutions</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS-Conection -->
+
+    <link rel="stylesheet" href="./portfolio.css" />
+
+    <!-- Email.js-Connection -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="mt-2">
+      <nav class="navbar navbar-expand-lg position-relative">
+        <div class="container">
+          <div class="row w-100 align-items-center">
+            <div class="col-3">
+              <a href="../index.html">
+                <img
+                  src="../Assets/img/DG-LOGO-THREE.png"
+                  alt="Logo"
+                  style="max-width: 150px; width: 150px"
+                />
+              </a>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav text-center py-3 py-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active header_btn_opt"
+                      href="../index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown material-dropdown">
+                    <a
+                      class="nav-link dropdown-toggle header_btn_opt"
+                      href="#"
+                      tabindex="0"
+                    >
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!-- Web Development with nested submenu -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Web Services
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/webdev/webdev.html"
+                              >Web Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/web-design/web-design.html"
+                              >Web Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/cms-development/cms-development.html"
+                              >CMS Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/app-development/app-development.html"
+                              >APP Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/security-maintenance/security-maintenance.html"
+                              >Security & Maintenance</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Other menu items -->
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Digital Marketing
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/seo/seo.html"
+                              >SEO Optimization</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/graphic-design/graphic-design.html"
+                              >Graphic Design</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/social-market/social-market.html"
+                              >Social Media Marketing</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a
+                          class="dropdown-item d-flex justify-content-between align-items-center"
+                          href="javascript:void(0)"
+                        >
+                          Branding
+                          <span class="arrow">&#9656;</span>
+                        </a>
+                        <ul class="dropdown submenu">
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/ecommerce-solution/ecommerce-solution.html"
+                              >Ecommerce Solution</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/photography/photography.html"
+                              >Photography</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item header_btn_opt"
+                              href="../service/performance-optimization/performance-optimization.html"
+                              >Performance Optimization</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../clients/clients.html"
+                      >Our Clientele</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../about/about.html"
+                      >About</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link header_btn_opt"
+                      href="../contact/contact.html"
+                      >Contact Us</a
+                    >
+                  </li>
+
+                  <li class="nav-item d-lg-none m-0">
+                    <!-- <button
+                      href="#"
+                      class="consultant-btn w-75 p-2"
+                      style="font-weight: 500"
+                    >
+                      FREE CONSULTATION
+                    </button> -->
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdWgKu-Q9xJS_hanYGfQMfHJzPQlcLseWFE85VbBUnkbRg-yQ/viewform?usp=header"
+                      target="_blank"
+                      class="consultant-btn w-75 p-2"
+                      style="
+                        font-weight: 500;
+                        display: inline-block;
+                        text-align: center;
+                        text-decoration: none;
+                      "
+                    >
+                      FREE CONSULTATION
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end align-items-center">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdWgKu-Q9xJS_hanYGfQMfHJzPQlcLseWFE85VbBUnkbRg-yQ/viewform?usp=header"
+                class="consultant-btn d-none d-lg-inline-block p-2"
+                style="font-weight: 500; text-decoration: none"
+              >
+                FREE CONSULTATION
+              </a>
+
+              <button
+                class="navbar-toggler ms-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon">
+                  <div></div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title text-primary-custom">
+              Empowering Small Businesses with Digital Solutions
+              <span class="text-secondary-custom"></span>
+            </h1>
+            <p class="lead mb-4">
+              We help small businesses establish a strong online presence, reach
+              more customers, and grow revenue through strategic digital
+              solutions.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#services" class="btn btn-primary-custom"
+                >Our Services</a
+              >
+              <a href="#contact" class="btn btn-outline-primary-custom"
+                >Get Started</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <svg
+                width="100%"
+                height="500"
+                viewBox="0 0 600 500"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="grad1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#031246" />
+                    <stop offset="100%" stop-color="#05314f" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="100"
+                  y="50"
+                  width="400"
+                  height="300"
+                  rx="20"
+                  fill="url(#grad1)"
+                  opacity="0.9"
+                />
+                <circle cx="200" cy="150" r="60" fill="#4a90e2" opacity="0.7" />
+                <circle cx="400" cy="200" r="40" fill="#4a90e2" opacity="0.7" />
+                <rect
+                  x="150"
+                  y="250"
+                  width="300"
+                  height="100"
+                  rx="10"
+                  fill="white"
+                  opacity="0.9"
+                />
+                <rect
+                  x="180"
+                  y="280"
+                  width="180"
+                  height="15"
+                  rx="7"
+                  fill="#e0e0e0"
+                />
+                <rect
+                  x="180"
+                  y="310"
+                  width="120"
+                  height="15"
+                  rx="7"
+                  fill="#e0e0e0"
+                />
+                <circle cx="450" cy="300" r="25" fill="#4a90e2" />
+                <path
+                  d="M440 300 L450 310 L465 290"
+                  stroke="white"
+                  stroke-width="3"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <!-- <h2 class="section-title text-primary-custom">
+              About Global Technology
+            </h2> -->
+            <div class="mb-5">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                About Design Global Technology
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+
+            <p class="mb-4" style="text-align: justify">
+              We are a dedicated team of digital experts committed to helping
+              small businesses thrive in the digital age. With years of
+              experience across various industries, we understand the unique
+              challenges small businesses face when establishing their online
+              presence.
+            </p>
+            <p class="mb-4">
+              Our mission is to make professional digital services accessible
+              and affordable for businesses of all sizes. We believe that every
+              business deserves a chance to compete in today's digital
+              marketplace.
+            </p>
+            <div class="row mt-5">
+              <div class="col-12 col-sm-4">
+                <div class="text-center text-sm-left">
+                  <div class="stats-counter text-primary-custom">574+</div>
+                  <p class="mb-0">Projects Completed</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="text-center text-sm-left">
+                  <div class="stats-counter text-primary-custom">98%</div>
+                  <p class="mb-0">Client Satisfaction</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="text-center text-sm-left">
+                  <div class="stats-counter text-primary-custom">30+</div>
+                  <p class="mb-0">Industry Serve</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="p-4 border rounded bg-light">
+                  <h4 class="text-primary-custom">Our Vision</h4>
+                  <p class="mb-0">
+                    To be the leading digital partner for small businesses
+                    worldwide, empowering them to achieve sustainable growth
+                    through technology.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-4 border rounded bg-light">
+                  <h4 class="text-primary-custom">Our Approach</h4>
+                  <p class="mb-0">
+                    We take a collaborative approach, working closely with our
+                    clients to understand their unique needs and deliver
+                    customized solutions that drive real results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-3 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="text-center mb-4">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Our Services
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/webdev/webdev.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                    ></path>
+                    <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                    <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                    <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">Website Development</h4>
+                <p>
+                  Custom, responsive websites designed to convert visitors into
+                  customers. We build fast, secure, and SEO-friendly websites
+                  that work on all devices.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/digital-marketing/digital-marketing.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">Digital Marketing</h4>
+                <p>
+                  Strategic online marketing campaigns to increase your
+                  visibility, attract qualified leads, and grow your customer
+                  base through targeted channels.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/ecommerce-solution/ecommerce-solution.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">E-Commerce Solutions</h4>
+                <p>
+                  Complete online store setup with secure payment processing,
+                  inventory management, and marketing tools to boost your online
+                  sales.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/social-market/social-market.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">
+                  Social Media Management
+                </h4>
+                <p>
+                  Strategic social media planning, content creation, and
+                  community management to build your brand and engage with your
+                  audience.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/branding/branding.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <path d="M12 20h9"></path>
+                    <path
+                      d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">Brand Identity</h4>
+                <p>
+                  Complete branding packages including logo design, color
+                  schemes, typography, and brand guidelines to establish a
+                  cohesive brand identity.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              style="text-decoration: none; color: #000"
+              href="../service/seo/seo.html"
+            >
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                  >
+                    <polyline
+                      points="22 12 18 12 15 21 9 3 6 12 2 12"
+                    ></polyline>
+                  </svg>
+                </div>
+                <h4 class="text-primary-custom mb-3">SEO Optimization</h4>
+                <p>
+                  Improve your search engine rankings with our comprehensive SEO
+                  services, including keyword research, on-page optimization,
+                  and content strategy.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="text-center mb-4">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Our Work Flow
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h4 class="text-primary-custom mb-3">Discovery & Strategy</h4>
+              <p>
+                We begin by understanding your business, goals, target audience,
+                and competition. This helps us develop a customized strategy
+                that aligns with your objectives.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h4 class="text-primary-custom mb-3">Design & Development</h4>
+              <p>
+                Our team creates visually appealing designs and develops robust
+                solutions using the latest technologies, ensuring your digital
+                presence stands out.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h4 class="text-primary-custom mb-3">Testing & Refinement</h4>
+              <p>
+                We rigorously test all aspects of your project to ensure optimal
+                performance, usability, and compatibility across different
+                devices and platforms.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h4 class="text-primary-custom mb-3">Launch & Support</h4>
+              <p>
+                We deploy your project and provide ongoing support to ensure it
+                continues to perform well and adapts to changing business needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-3 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="text-center mb-5">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Success Stories
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <!-- <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#031246"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  ></path>
+                </svg> -->
+                <img
+                  src="../Assets/img/client-review-portfolio-one.jpeg"
+                  alt=""
+                  height="100%"
+                  width="100%"
+                  style="object-fit: cover"
+                />
+              </div>
+              <div class="p-4">
+                <h5 class="text-primary-custom">Princes Salon & Cafe</h5>
+                <p class="mb-3">
+                  Increased online orders by 240% for a neighborhood cafe with a
+                  responsive site and integrated ordering system.
+                </p>
+                <!-- <div class="d-flex">
+                  <span class="badge bg-primary-custom me-2">Web Design</span>
+                  <span class="badge bg-secondary-custom">E-commerce</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <!-- <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#031246"
+                  stroke-width="1"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg> -->
+                <img
+                  src="../Assets/img/client-review-portfolio-two.jpeg"
+                  alt=""
+                  height="100%"
+                  width="100%"
+                  style="object-fit: cover"
+                />
+              </div>
+              <div class="p-4">
+                <h5 class="text-primary-custom">Weal Power</h5>
+                <p class="mb-3">
+                  Boosted Instagram 500% and store visits 35% for this local
+                  boutique on Weal Power.
+                </p>
+                <!-- <div class="d-flex">
+                  <span class="badge bg-primary-custom me-2">Social Media</span>
+                  <span class="badge bg-secondary-custom"
+                    >Content Strategy</span
+                  >
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <!-- <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#031246"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  ></path>
+                </svg> -->
+                <img
+                  src="../Assets/img/client-review-portfolio-three.jpeg"
+                  alt=""
+                  height="100%"
+                  width="100%"
+                  style="object-fit: cover"
+                />
+              </div>
+              <div class="p-4">
+                <h5 class="text-primary-custom">Goosebumps Events</h5>
+                <p class="mb-3">
+                  Improved organic search rankings for a consulting firm,
+                  resulting in a 300% increase in qualified leads.
+                </p>
+                <!-- <div class="d-flex">
+                  <span class="badge bg-primary-custom me-2">SEO</span>
+                  <span class="badge bg-secondary-custom"
+                    >Content Marketing</span
+                  >
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="text-center mb-4">
+              <span
+                style="
+                  font-size: 30px;
+                  font-weight: 600;
+                  display: inline-block;
+                  position: relative;
+                  color: #031246;
+                "
+              >
+                Our Client Review
+                <span
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: #031246;
+                    border-radius: 5px;
+                  "
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center me-3"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="text-white fw-bold">S</span>
+                </div>
+                <div>
+                  <h5 class="mb-0 text-primary-custom">Rajib Basak</h5>
+                  <small>Riddhima Fashion </small>
+                </div>
+              </div>
+              <p class="mb-0">
+                "Design Global Technology transformed our digital presence with
+                their innovative solutions. Their team's expertise and
+                dedication exceeded our expectations." "
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center me-3"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="text-white fw-bold">M</span>
+                </div>
+                <div>
+                  <h5 class="mb-0 text-primary-custom">Minal Paul</h5>
+                  <small>Lakmé Academy </small>
+                </div>
+              </div>
+              <p class="mb-0">
+                "Working with Design Global Technology has been a game-changer
+                for our business. Their strategic approach and technical
+                excellence delivered outstanding results."
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="rounded-circle bg-primary-custom d-flex align-items-center justify-content-center me-3"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="text-white fw-bold">R</span>
+                </div>
+                <div>
+                  <h5 class="mb-0 text-primary-custom">Vikram Kanjee</h5>
+                  <small>Dragons' Den</small>
+                </div>
+              </div>
+              <p class="mb-0">
+                "The team at Design Global Technology boosted our digital
+                marketing efforts, increasing Dragons' Den's online visibility
+                and helping us attract more diners consistently."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span
+            style="
+              font-size: 30px;
+              font-weight: 600;
+              display: inline-block;
+              position: relative;
+              color: #031246;
+            "
+          >
+            Get In Touch
+            <span
+              style="
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 4px;
+                width: 50%;
+                background-color: #031246;
+                border-radius: 5px;
+              "
+            ></span>
+          </span>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <!-- Contact Form -->
+          <div class="col-12 col-lg-6">
+            <div class="contact-form-container h-100">
+              <form
+                id="contactForm"
+                class="d-flex flex-column justify-content-between h-100"
+              >
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                      name="from_name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="your.email@example.com"
+                      name="from_email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="company" class="form-label">Company Name</label>
+                    <input
+                      type="text"
+                      id="company"
+                      class="form-control"
+                      placeholder="Your Company"
+                      name="company"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="number" class="form-label">Mobile Number</label>
+                    <input
+                      type="text"
+                      id="number"
+                      class="form-control"
+                      placeholder="Mobile Number"
+                      name="phone"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="service" class="form-label"
+                    >Service Interested In</label
+                  >
+                  <select
+                    id="service"
+                    class="form-control"
+                    name="service"
+                    required
+                  >
+                    <option value="">Select a service</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="social">Social Media Marketing</option>
+                    <option value="content">Content Marketing</option>
+                    <option value="ppc">PPC Advertising</option>
+                    <option value="web">Web Development</option>
+                    <option value="strategy">Digital Strategy</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message_detail" class="form-label"
+                    >Project Details</label
+                  >
+                  <textarea
+                    id="message_detail"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Tell us about your project..."
+                    name="message"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  id="btn_send"
+                  class="btn btn-primary submit-btn"
+                >
+                  Send Message
+                </button>
+                <div id="status" class="mt-2"></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Maps Column -->
+          <div class="col-lg-6">
+            <div class="maps-column h-100">
+              <!-- Map 1 -->
+              <div class="map-container mb-4 h-50">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.9773616730713!2d88.35700247435108!3d22.50503253544517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027dc4311dba6f%3A0x9f3b3dd90ef0fa25!2sDESIGN%20GLOBAL%20TECHNOLOGY%20-%20Digital%20Marketing%20Company%20in%20Kolkata!5e0!3m2!1sen!2sin!4v1760378337311!5m2!1sen!2sin"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <!-- Map 2 -->
+              <div class="map-container h-50">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d117966.5712930533!2d88.10638117834797!3d22.48709255991488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x265aebb057de5b2d%3A0x62057b37803dfb89!2s15%2C%20Budge%20Budge%20Trunk%20Rd%2C%20near%20Queen%20Cinema%2C%20Nandanpur%2C%20Budge%20Budge%2C%20Kolkata%2C%20West%20Bengal%20700137!3m2!1d22.4871135!2d88.1887828!5e0!3m2!1sen!2sin!4v1761392307753!5m2!1sen!2sin"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="flooting-whatsapp-btn flooting-ai-btn"
+      style="background-color: #f9f9fb"
+    >
+      <a
+        href="https://wa.me/918420600137"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+        />
+      </a>
+      <br />
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+          Tawk_LoadStart = new Date();
+        (function () {
+          var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/680b8cf929a5a6191417a3dc/1ipmhtbsd";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Logo and About Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">About</h3>
+          <p class="about-text">
+            Design Global Technology is a premier digital solutions provider
+            offering web development, digital marketing, and corporate branding
+            services.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/dsignglobal/" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/designglobal_/" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://in.linkedin.com/company/design-global-technology"
+              class="me-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+
+            <a href="https://wa.me/918420600137" class="me-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-whatsapp"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Useful Links Section - Part 1 -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Useful Links</h3>
+          <ul class="footer-links">
+            <!-- <li>
+                <a
+                  href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+                  >Careers</a
+                >
+              </li> -->
+            <li><a href="../faq/faq.html">FAQ</a></li>
+            <li><a href="../policy/policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="../terms-condition/terms-condition.html"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li><a href="../blog/blog.html">Blog</a></li>
+            <li><a href="../event/event.html">Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"
+                />
+                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg>
+              <span>+91 84206 00137</span>
+            </div>
+            <div class="contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                />
+              </svg>
+              <span>info@designglobal.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hiring Section -->
+        <div class="footer-section">
+          <h3 class="footer-heading">We're Hiring</h3>
+          <p class="hiring-text">Join our talented team</p>
+          <div class="hiring-roles">
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="web-dev"
+              >Web Developer</a
+            >
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="graphic-designer"
+            >
+              Graphic Designer
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sales-executive"
+            >
+              Sales Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="social-media-executive"
+            >
+              Social Media Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sr-sales-executive"
+            >
+              Sr. Sales Executive
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+              style="text-decoration: none"
+              class="role-btn"
+              data-role="sr-web-developer"
+            >
+              Sr. Web Developer
+            </a>
+          </div>
+          <a
+            href="https://docs.google.com/forms/d/173bICCy7rprzCka5suNntuibstTeOHmE08nBKO70WNM/edit"
+            style="text-decoration: none"
+            class="apply-all-btn"
+            >Apply for Any Position</a
+          >
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Design Global Technology</p>
+
+        <div
+          class="address-section ps-2"
+          style="font-size: 11px; text-align: center"
+        >
+          <div>
+            Corporate Address: 8, Jodhpur Gardens, Lake Gardens, Kolkata, 700045
+            (in) || Registered Address: 15, BBT Rd, Budge Budge, Kolkata 700137
+            (in)
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script>
+      emailjs.init("ISzacFihQ-Z_xnO58");
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const serviceID = "service_rvfrmpn";
+          const templateID = "template_24iosn1";
+
+          const templateParams = {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            company: document.getElementById("company").value,
+            phone: document.getElementById("number").value,
+            service: document.getElementById("service").value,
+            message: document.getElementById("message_detail").value,
+          };
+
+          emailjs
+            .send(serviceID, templateID, templateParams)
+            .then((response) => {
+              console.log(
+                "Email sent successfully:",
+                response.status,
+                response.text
+              );
+              document.getElementById("status").innerText =
+                "Message sent successfully!";
+              document.getElementById("status").style.color = "green";
+              document.getElementById("contactForm").reset();
+            })
+            .catch((error) => {
+              console.error("Failed to send email:", error);
+              document.getElementById("status").innerText =
+                "Failed to send the message. Please try again.";
+              document.getElementById("status").style.color = "red";
+            });
+        });
+    </script> -->
+    <script src="./portfolio.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

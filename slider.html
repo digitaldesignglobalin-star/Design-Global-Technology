@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Image Ring Slider</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3a0ca3;
+        --accent-color: #4cc9f0;
+        --dark-color: #1a1a2e;
+        --light-color: #f8f9fa;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--dark-color) 0%, #16213e 100%);
+        color: var(--light-color);
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .hero-section {
+        padding: 60px 0;
+      }
+
+      .slider-container {
+        width: 100%;
+        height: 500px;
+        perspective: 2000px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ring {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 40s infinite linear;
+      }
+
+      .ring.paused {
+        animation-play-state: paused;
+      }
+
+      .image {
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -150px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transform-style: preserve-3d;
+        transition: all 0.5s ease;
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      .image:hover {
+        opacity: 1 !important;
+        transform: translateZ(50px) scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        z-index: 10;
+      }
+
+      .ring:hover .image:not(:hover) {
+        opacity: 0.5;
+      }
+
+      .controls {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .control-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        font-size: 1.5rem;
+      }
+
+      .control-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .control-btn:active {
+        transform: translateY(0);
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .display-5 {
+        color: var(--accent-color);
+        font-weight: 700;
+      }
+
+      .lead {
+        color: var(--accent-color);
+        font-weight: 500;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 992px) {
+        .slider-container {
+          height: 400px;
+          perspective: 1500px;
+        }
+
+        .image {
+          width: 220px;
+          height: 300px;
+          margin-top: -150px;
+          margin-left: -110px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .slider-container {
+          height: 350px;
+          perspective: 1200px;
+        }
+
+        .image {
+          width: 180px;
+          height: 250px;
+          margin-top: -125px;
+          margin-left: -90px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .slider-container {
+          height: 300px;
+        }
+
+        .image {
+          width: 150px;
+          height: 200px;
+          margin-top: -100px;
+          margin-left: -75px;
+        }
+
+        .controls {
+          gap: 10px;
+        }
+
+        .control-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold mb-4">AUTHENTICITY MATTERS</h1>
+            <p class="lead mb-4">
+              We Design Experiences That Drive Business Growth
+            </p>
+            <p>
+              At Design Global Technology, we're more than just designers—we're
+              Kolkata's best web development company and a results-driven
+              digital marketing agency.
+            </p>
+            <!-- <a href="#contact" class="btn btn-primary btn-lg mt-3"
+                      >Start Your Journey</a
+                    > -->
+          </div>
+          <div class="col-lg-6 text-center">
+            <!-- 3D Image Ring Slider -->
+            <div class="slider-container">
+              <div class="ring">
+                <!-- Images will be positioned here with JavaScript -->
+              </div>
+            </div>
+
+            <div class="controls">
+              <div class="control-btn" id="pauseBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-pause"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ring = document.querySelector(".ring");
+        const prevBtn = document.getElementById("prevBtn");
+        const pauseBtn = document.getElementById("pauseBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const pauseIcon = pauseBtn.querySelector("i");
+
+        const images = [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1464822759844-d531f3d44d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        ];
+
+        const imageDistance = 500; // z-distance for 3D effect
+        const angle = 360 / images.length;
+        let isPaused = false;
+        let currentRotation = 0;
+
+        // Create and position images in 3D space
+        images.forEach((imageUrl, index) => {
+          const imageElement = document.createElement("div");
+          imageElement.className = "image";
+          imageElement.style.backgroundImage = `url(${imageUrl})`;
+          imageElement.style.transform = `rotateY(${
+            index * angle
+          }deg) translateZ(${imageDistance}px)`;
+
+          // Add staggered animation delay for entrance effect
+          imageElement.style.animation = `fadeIn 0.8s ease-out ${
+            index * 0.1
+          }s both`;
+
+          ring.appendChild(imageElement);
+        });
+
+        // Pause/Play functionality
+        pauseBtn.addEventListener("click", function () {
+          isPaused = !isPaused;
+
+          const pauseSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+      class="bi bi-pause" viewBox="0 0 16 16">
+      <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4
+        0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1
+        0V4a.5.5 0 0 1 .5-.5"/>
+    </svg>`;
+
+          const playSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+      class="bi bi-play" viewBox="0 0 16 16">
+      <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1
+        0 1.392l-6.363 3.692C4.713 12.69 4 12.345
+        4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg>`;
+
+          if (isPaused) {
+            ring.classList.add("paused");
+            pauseBtn.innerHTML = playSVG; // Show play icon
+          } else {
+            ring.classList.remove("paused");
+            pauseBtn.innerHTML = pauseSVG; // Show pause icon
+          }
+        });
+
+        // Next button - rotate ring forward
+        nextBtn.addEventListener("click", function () {
+          currentRotation -= angle;
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        });
+
+        // Previous button - rotate ring backward
+        prevBtn.addEventListener("click", function () {
+          currentRotation += angle;
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        });
+
+        // Handle mobile touch events for basic interaction
+        let touchStartX = 0;
+        let isDragging = false;
+
+        ring.addEventListener("touchstart", function (e) {
+          touchStartX = e.touches[0].clientX;
+          isDragging = true;
+          ring.style.animationPlayState = "paused";
+        });
+
+        ring.addEventListener("touchmove", function (e) {
+          if (!isDragging) return;
+
+          const touchX = e.touches[0].clientX;
+          const deltaX = touchX - touchStartX;
+
+          // Calculate rotation based on drag distance
+          const rotation = deltaX * 0.5;
+
+          // Apply rotation directly
+          ring.style.transform = `rotateY(${rotation}deg)`;
+        });
+
+        ring.addEventListener("touchend", function () {
+          isDragging = false;
+          if (!isPaused) {
+            ring.style.animationPlayState = "running";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
