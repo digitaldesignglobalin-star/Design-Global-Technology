@@ -10,6 +10,16 @@ body {
     sans-serif;
 }
 
+/* Custom Cursor Animation */
+.shape {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
 /* =========================
    HEADER & NAVBAR STYLES
 ========================= */
@@ -514,6 +524,45 @@ body {
   .slider_head_text {
     font-size: 25px;
   }
+}
+
+/* =========================
+   Banner Effect
+========================= */
+
+.poster {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.poster-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Optional overlay */
+  z-index: 1;
+}
+
+.layer {
+  position: relative;
+  z-index: 2;
+}
+
+.slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* =========================
@@ -1604,7 +1653,6 @@ body {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
 }
 
 .social-links > a {

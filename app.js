@@ -208,82 +208,109 @@ document.querySelectorAll(".dropdown-submenu > a").forEach((submenuToggle) => {
   });
 });
 
-// new-window-open-function
+// Cursor-animation
+const shapes = [
+  "D",
+  "E",
+  "S",
+  "I",
+  "G",
+  "N",
+  " ",
+  "G",
+  "L",
+  "O",
+  "B",
+  "A",
+  "L",
+  " ",
+  "T",
+  "E",
+  "C",
+  "H",
+  "N",
+  "O",
+  "L",
+  "O",
+  "G",
+  "Y",
+];
+const colors = [
+  "#3d83ea",
+  "#74b139",
+  "#ec9519",
+  "#1fe4f9",
+  "#052595",
+  "#df4344",
+  "#986299",
+];
 
-function goToFeedback() {
-  window.location.href = "feedback/feedback.html";
+let lastX = 0;
+let lastY = 0;
+let isMoving = false;
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.pageX;
+  const y = e.pageY;
+
+  if (!isMoving || Math.abs(x - lastX) > 10 || Math.abs(y - lastY) > 10) {
+    isMoving = true;
+    createShape(x, y);
+  }
+
+  lastX = x;
+  lastY = y;
+});
+
+document.addEventListener("mouseleave", () => {
+  isMoving = false;
+});
+
+function createShape(x, y) {
+  const shape = document.createElement("div");
+  shape.className = "shape";
+
+  // Get random letter from the new array
+  shape.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+
+  shape.style.left = x - 15 + "px"; // Center the shape
+  shape.style.top = y - 30 + "px"; // Start above the cursor
+
+  // Use new color palette
+  shape.style.color = colors[Math.floor(Math.random() * colors.length)];
+
+  // Add spacing for space characters
+  if (shape.textContent === " ") {
+    shape.style.minWidth = "10px";
+    shape.style.letterSpacing = "6px";
+  }
+
+  document.body.appendChild(shape);
+
+  const animation = shape.animate(
+    [
+      { transform: "translateY(0)", opacity: 1 },
+      { transform: "translateY(150px)", opacity: 0 },
+    ],
+    {
+      duration: 1500,
+      easing: "cubic-bezier(0.4, 0, 0.2, 1)",
+    }
+  );
+
+  animation.onfinish = () => {
+    shape.remove();
+  };
 }
 
-function goToPortfolio() {
-  window.location.href = "portfolio/portfolio.html";
-}
+// banner-effect
 
-function goToAbout() {
-  window.location.href = "about/about.html";
-}
-
-function goToBlog() {
-  window.location.href = "blog/blog.html";
-}
-
-function goToContact() {
-  window.location.href = "contact/contact.html";
-}
-
-function goToWebDev() {
-  window.location.href = "service/webdev/webdev.html";
-}
-
-function goToWebDes() {
-  window.location.href = "service/web-design/web-design.html";
-}
-
-function goToCmsDev() {
-  window.location.href = "service/cms-development/cms-development.html";
-}
-
-function goToAppDev() {
-  window.location.href = "service/app-development/app-development.html";
-}
-
-function goToSecurityMaintenance() {
-  window.location.href =
-    "service/security-maintenance/security-maintenance.html";
-}
-
-// function goToDigitalMarketing() {
-//   window.location.href = "service/digital-marketing/digital-marketing.html";
-// }
-
-function goToSeo() {
-  window.location.href = "service/seo/seo.html";
-}
-
-// function goToBranding() {
-//   window.location.href = "service/branding/branding.html";
-// }
-
-function goToGraphicDesign() {
-  window.location.href = "service/graphic-design/graphic-design.html";
-}
-
-function goToSocialMediaMaketing() {
-  window.location.href = "service/social-market/social-market.html";
-}
-
-function goToOurClient() {
-  window.location.href = "/clients/clients.html";
-}
-
-function goToEcommerce() {
-  window.location.href = "service/ecommerce-solution/ecommerce-solution.html";
-}
-
-function goToPhotography() {
-  window.location.href = "service/photography/photography.html";
-}
-
-function goToPerformance() {
-  window.location.href =
-    "service/performance-optimization/performance-optimization.html";
+// Initialize parallax for banner
+var bannerScene = document.getElementById("bannerParallax");
+if (bannerScene) {
+  var parallax = new Parallax(bannerScene, {
+    selector: ".layer",
+    hoverOnly: true, // Optional: only on mouse move
+    relativeInput: true,
+  });
 }

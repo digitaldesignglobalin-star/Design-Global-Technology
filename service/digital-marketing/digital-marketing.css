@@ -191,7 +191,6 @@ body {
 }
 
 .services-section {
-  padding: 50px 0;
   background-color: #f8f9fa;
 }
 
@@ -220,10 +219,6 @@ body {
   font-weight: 600;
   margin-bottom: 15px;
   color: var(--primary-dark);
-}
-
-.other-services-section {
-  padding: 50px 0;
 }
 
 .other-service-card {
@@ -564,7 +559,6 @@ body {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
 }
 
 /* Responsive Design */
